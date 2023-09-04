@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
 import {
-  PaymentElement,
   LinkAuthenticationElement,
-  useStripe,
+  PaymentElement,
   useElements,
+  useStripe,
 } from "@stripe/react-stripe-js";
+import React, { useEffect, useState } from "react";
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -60,7 +60,7 @@ const CheckoutForm = () => {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:5173/success",
+        return_url: "https://liberr.vercel.app/success",
       },
     });
 
